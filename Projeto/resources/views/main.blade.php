@@ -22,7 +22,7 @@
     </head>
     <body class="antialiased">
     <div>
-        @yield('conteudo') 
+        
     </div>
         </body>
 </html>

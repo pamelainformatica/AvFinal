@@ -1,4 +1,4 @@
-@extend('main')
+@extends('main')
 @section('conteudo')
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
@@ -13,7 +13,23 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+                @endsection 
+@endif
 
-  
-@endsection
+<hi>acessório</h1>
+
+<ul>
+    <?php
+
+    $loja = [
+['nome' => 'boné', 'quantidade' => 15, 'valorunit' => 300],
+['nome' => 'relógio', 'quantidade' => 10, 'valorunit' => 600],
+['nome' => 'oculos', 'quantidade' => 20, 'valorunit' => 400],
+
+    ];
+
+    forech ($loja as $loja) {
+        echo "li><a" href='detalhes.php?nome={$acessório['nome]}$quantidade={$acessório}'['valorunit']}
+    }
+
+

@@ -8,3 +8,8 @@ php -r "unlink('composer-setup.php');"
 
 php composer.phar install
 php artisan migrate
+
+php artisan make:model -mrc cliente
+php artisan serve
+
+php artisan migrate
