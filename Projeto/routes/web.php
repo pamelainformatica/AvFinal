@@ -1,7 +1,8 @@
 <?php
 
-use App\http\Contoller\ClienteController;
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ Route::get('/', function () {
 
 Route::get('/criar',[ClienteController::class, 'create'])->name ('clientes_create');
 Route::post('/criar',[ClienteController::class, 'store'])->name ('clientes_store');
+Rout:: get('/ver/{id}', [ProdutoContoller::clas, 'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

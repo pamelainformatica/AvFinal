@@ -13,3 +13,7 @@ php artisan make:model -mrc cliente
 php artisan serve
 
 php artisan migrate
+
+
+Rout:: get ('/ver/{id}', [ProdutoContoller::clas, 'show])
+$produto= Produto::findOr

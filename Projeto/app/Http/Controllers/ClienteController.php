@@ -24,7 +24,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('layout.criar');
+        return view('layouts.criar');
     }
 
     /**
@@ -50,7 +50,8 @@ class ClienteController extends Controller
      */
     public function show(cliente $cliente)
     {
-        //
+        $cliente= Cliente::findOrFail($id);
+        return view('layouts.show', [Cliente=>$Cliente]);
     }
 
     /**

@@ -16,20 +16,6 @@
                 @endsection 
 @endif
 
-<hi>acessório</h1>
-
-<ul>
-    <?php
-
-    $loja = [
-['nome' => 'boné', 'quantidade' => 15, 'valorunit' => 300],
-['nome' => 'relógio', 'quantidade' => 10, 'valorunit' => 600],
-['nome' => 'oculos', 'quantidade' => 20, 'valorunit' => 400],
-
-    ];
-
-    forech ($loja as $loja) {
-        echo "li><a" href='detalhes.php?nome={$acessório['nome]}$quantidade={$acessório}'['valorunit']}
     }
 
 
