@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form action="{{route('clietnes_store')}}" medod='post'>
+<form action="{{route('clientes_store')}}" method='post'>
     @csrf
     <label>Nome</label>
     <input type="text" name="nome" id="nome">

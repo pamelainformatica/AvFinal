@@ -7,7 +7,9 @@
 </head>
 <body>
     <label for="">Produtos</label>
-    <input type="text" name="produto" id="produto" value="{{$produto->nome}}"
-
+    <input type="text" name="produto" id="produto" value="{{$cliente->nome}}">
+    <input type="text" name="quantidade" id="quantidade" value="{{$cliente->quantidade}}">
+    <input type="text" name="valorunit" id="valorunit" value="{{$cliente->valorunit}}">
+    
 </body>
 </html>

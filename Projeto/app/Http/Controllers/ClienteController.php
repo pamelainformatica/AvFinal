@@ -34,11 +34,11 @@ class ClienteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {// dd($request);
-        $requesr->all();
-        cliente::create(['nome'->$request->nome, 
-        'quantidade'->$request->quantidade,
-        'valorunit'->$request->valorunit
+    { //dd($request);
+        //$requesr->all();
+        cliente::create(['nome'=>$request->nome, 
+        'quantidade'=>$request->quantidade,
+        'valorunit'=>$request->valorunit
     ]);
     }
 
@@ -48,10 +48,11 @@ class ClienteController extends Controller
      * @param  \App\Models\cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function show(cliente $cliente)
+    public function show($id)
     {
-        $cliente= Cliente::findOrFail($id);
-        return view('layouts.show', [Cliente=>$Cliente]);
+        $cliente= cliente::findOrFail($id);
+        //dd ($cliente);
+        return view('layouts.show', ['cliente'=>$cliente]);
     }
 
     /**
@@ -62,7 +63,9 @@ class ClienteController extends Controller
      */
     public function edit(cliente $cliente)
     {
-        //
+        $cliente= cliente::findOrFail($id);
+        return view('layouts.editar'['cliente'=>$cliente]);
+
     }
 
     /**
